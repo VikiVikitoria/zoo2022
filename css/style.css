@@ -98,7 +98,6 @@ main.menu {
     flex-wrap: wrap;
 }
 .card {
-    /* background-color: #c0ffe0; */
     border: 1px solid grey;
     border-radius: 10px;
     width: 200px;
@@ -148,7 +147,7 @@ main.menu {
     background-image: url("../img/food/Zoo-Hero-Eating.jpeg");
 }
 .banner8 {
-    background-image: url("../misc/man\ redigerad\ bild.png");
+    background-image: url("../img/persons/man\ redigerad\ bild.png");
 }
 
 /* about page */
