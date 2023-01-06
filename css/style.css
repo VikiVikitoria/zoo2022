@@ -2,6 +2,12 @@ body,html,* {
     margin: 0;
     padding: 0;
 }
+h1, h2, h3, h4, h5, a, p, li, footer {
+    font-family: Arial, Helvetica, sans-serif;
+}
+p {
+    font-size: 14px;
+}
 #wrapper {
     display: grid;
     max-width: 1600px;
@@ -10,51 +16,105 @@ body,html,* {
 }
 nav {
     grid-column: 1 / -1;
-    background-color: brown;
+    background-color: darkgray;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    float: left;
+}
+nav a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    background-color: #dddddd;
+}
+nav a:hover {
+    color: white;
+    background-color: darkgray;
+}
+nav a:active {
+    color: white;
+    background-color: darkgray;
 }
 header {
     grid-column: 1 / -1;
-    background-color: blueviolet;
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 main.index {
     grid-column: 1 / -1;
-    background-image: url("/img/animals/feeding-time-for-the-panda-550x413.jpeg");
+    background-image: url(../img/about/about_us.jpg);
     background-position: center;
     background-size: cover;
     height: 400px;
 }
+main.index h1 {
+    position: relative;
+    left: 30px;
+    top: 30px;
+    color: white;
+    text-shadow: 2px 2px gray;
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-weight: bold;
+    text-transform: capitalize;
+}
 footer {
     grid-column: 1 / -1;
-    background-color: hotpink;
-    height: 100px;
-}
+    background-color: darkgray;
+    color: white;
+    text-align: right;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+  }
 
 /* menu page */
+
 main.menu {
-    grid-column: 1 / -1;
-    margin: 0 auto;
+    grid-column: 2 / -2;
 }
 .cards {
     display: flex;
     flex-direction: column;
-    row-gap: 32px;
+    gap: 32px;
+    margin: 0 auto;
+    align-items: center;
 }
 .card-container1, .card-container2 {
     display: flex;
-    column-gap: 32px;
+    gap: 32px;
+    flex-wrap: wrap;
 }
 .card {
-    background-color: #c0ffe0;
+    /* background-color: #c0ffe0; */
+    border: 1px solid grey;
     border-radius: 10px;
     width: 200px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
     row-gap: 8px;
+
 }
 .card h3, .card p {
     text-align: center;
+}
+.card p {
+    margin: 0 10px;
 }
 .card img {
     max-width: 64px;
@@ -67,30 +127,61 @@ main.menu {
 }
 
 .banner1 {
-    background-image: url("/img/food/0722-san-diego-zoo-dining-boys-kids-meal.jpeg");
+    background-image: url("../img/food/0722-san-diego-zoo-dining-boys-kids-meal.jpeg");
 }
 .banner2 {
-    background-image: url("/img/food/Dining-Options_Header.jpeg");
+    background-image: url("../img/food/Dining-Options_Header.jpeg");
 }
 .banner3 {
-    background-image: url("/img/food/download.jpeg");
+    background-image: url("../img/food/download.jpeg");
 }
 .banner4 {
-    background-image: url("/img/food/image.jpeg");
+    background-image: url("../img/food/image.jpeg");
 }
 .banner5 {
-    background-image: url("/img/food/maxresdefault.jpeg");
+    background-image: url("../img/food/maxresdefault.jpeg");
 }
 .banner6 {
-    background-image: url("/img/food/NZ-food-image-1024x683.webp");
+    background-image: url("../img/food/NZ-food-image-1024x683.webp");
 }
 .banner7 {
-    background-image: url("/img/food/Zoo-Hero-Eating.jpeg");
+    background-image: url("../img/food/Zoo-Hero-Eating.jpeg");
 }
 .banner8 {
-    background-image: url("/img/persons/avatar-1b1afc16e9bc79edbb292d32abbc2a86.jpg");
+    background-image: url("../img/persons/avatar-1b1afc16e9bc79edbb292d32abbc2a86.jpg");
 }
 
 /* about page */
 
-Hej
+main.about {
+    grid-column: 2 / -2;
+    gap: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main.about .section {
+    display: flex;
+    gap: 32px;
+}
+main.about .section:nth-child(1) {
+    margin-top: 64px;
+}
+main.about .section div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+main.about .section p {
+    max-width: 40ch;
+}
+main.about div img {
+    width: 400px;
+}
+main.about .section:nth-child(1) {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+main.about img {
+    border-radius: 10px;
+}
